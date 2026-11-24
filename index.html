@@ -1,0 +1,1245 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+      <title>NoteNest — Open-Access Study Notes &amp; University Pins</title>
+
+        <meta name="theme-color" content="#FAF8F5" />
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+            <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+              <meta name="apple-mobile-web-app-title" content="NoteNest" />
+                <meta name="mobile-web-app-capable" content="yes" />
+                  <meta name="application-name" content="NoteNest" />
+                    <meta name="description" content="Aesthetic Pinterest-style study board with free notes for Class 11-12, Diploma, Degree, Medical, Law, CA, Masters, PhD, AI, Psychology & Cybersecurity." />
+
+                      <script src="https://cdn.tailwindcss.com"></script>
+                        <link rel="preconnect" href="https://fonts.googleapis.com">
+                          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                            <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+                              <script>
+                                  tailwind.config = {
+                                        theme: {
+                                                extend: {
+                                                          fontFamily: {
+                                                                      sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+                                                                                  serif: ['"Fraunces"', 'Georgia', 'serif'],
+                                                                                            },
+                                                                                                      colors: {
+                                                                                                                  cream: '#FAF8F5', sand: '#F3EFEA', ink: '#242120', muted: '#6E6864',
+                                                                                                                              sage: { bg: '#E8F0E8', text: '#355439', border: '#CFE0CF' },
+                                                                                                                                          rose: { bg: '#F7E7E8', text: '#7A3E43', border: '#ECCCD0' },
+                                                                                                                                                      lavender: { bg: '#EFEAF8', text: '#514173', border: '#DDD3F0' },
+                                                                                                                                                                  butter: { bg: '#FDF5DC', text: '#735C1E', border: '#F5E5B3' },
+                                                                                                                                                                              sky: { bg: '#E5F1F8', text: '#2E5873', border: '#C8E1F0' },
+                                                                                                                                                                                          peach: { bg: '#FBECE4', text: '#7D452B', border: '#F3D4C3' }
+                                                                                                                                                                                                    },
+                                                                                                                                                                                                              boxShadow: {
+                                                                                             </head>
+
+                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                      'card': '0 4px 18px -2px rgba(36, 33, 32, 0.05)',
+                                                                                                                                                                                                                                                  'nav': '0 -4px 20px rgba(36, 33, 32, 0.05)'
+                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                    }
+                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                              }
+                                                                                                                                                                                                                                                                                </script>
+
+                                                                                                                                                                                                                                                                                  <style>
+                                                                                                                                                                                                                                                                                      body { background-color: #FAF8F5; color: #242120; -webkit-tap-highlight-color: transparent; }
+                                                                                                                                                                                                                                                                                          .no-scrollbar::-webkit-scrollbar { display: none; }
+                                                                                                                                                                                                                                                                                              .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+                                                                                                                                                                                                                                                                                                  .masonry-grid { column-count: 2; column-gap: 1rem; }
+                                                                                                                                                                                                                                                                                                      @media (min-width: 768px) { .masonry-grid { column-count: 3; column-gap: 1.25rem; } }
+                                                                                                                                                                                                                                                                                                          @media (min-width: 1120px) { .masonry-grid { column-count: 4; column-gap: 1.5rem; } }
+                                                                                                                                                                                                                                                                                                              .masonry-item { break-inside: avoid; margin-bottom: 1rem; }
+                                                                                                                                                                                                                                                                                                                  @media (min-width: 768px) { .masonry-item { margin-bottom: 1.25rem; } }
+                                                                                                                                                                                                                                                                                                                      .fade-in { animation: fadeIn 0.25s ease-out forwards; }
+                                                                                                                                                                                                                                                                                                                          @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+                                                                                                                                                                                                                                                                                                                              @keyframes popIn { 0% { transform: scale(0.92); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
+                                                                                                                                                                                                                                                                                                                                  .pop-in { animation: popIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+                                                                                                                                                                                                                                                                                                                                      @keyframes splashFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-6px); } }
+                                                                                                                                                                                                                                                                                                                                          .splash-float { animation: splashFloat 2.4s ease-in-out infinite; }
+                                                                                                                                                                                                                                                                                                                                              .splash-hide { opacity: 0 !important; pointer-events: none !important; }
+                                                                                                                                                                                                                                                                                                                                                  @media print {
+                                                                                                                                                                                                                                                                                                                                                        body * { visibility: hidden !important; }
+                                                                                                                                                                                                                                                                                                                                                              #printable-sheet, #printable-sheet * { visibility: visible !important; }
+                                                                                                                                                                                                                                                                                                                                                                    #printable-sheet {
+                                                                                                                                                                                                                                                                                                                                                                            position: fixed !important; left: 0 !important; top: 0 !important;
+                                                                                                                                                                                                                                                                                                                                                                                    width: 100% !important; background: #FFFFFF !important; color: #111111 !important;
+                                                                                                                                                                                                                                                                                                                                                                                            padding: 24px 32px !important; box-shadow: none !important; border: none !important;
+                                                                                                                                                                                                                                                                                                                                                                                                  }
+                                                                                                                                                                                                                                                                                                                                                                                                        .no-print { display: none !important; }
+                                                                                                                                                                                                                                                                                                                                                                                                            }
+                                                                                                                                                                                                                                                                                                                                                                                                              </style>
+                                                                                                                                                                                                                                                                                                                                                                                                              </head>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           </head>
+
+  <!-- Guest-First Onboarding Modal -->
+  <div id="onboarding-modal" class="hidden fixed inset-0 z-40 bg-ink/50 backdrop-blur-xs flex items-center justify-center p-4 no-print">
+    <div class="bg-cream w-full max-w-xl rounded-[28px] p-6 sm:p-7 shadow-2xl border border-stone-200 pop-in max-h-[92vh] overflow-y-auto no-scrollbar">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 class="font-serif text-2xl font-bold text-ink leading-tight">Welcome to NoteNest</h2>
+          <p class="text-xs text-muted">Active study hub • 14,800+ learners • All branches &amp; trending topics</p>
+        </div>
+        <span class="px-2.5 py-1 rounded-full bg-sage-bg text-sage-text text-[10px] font-bold">Free Worldwide</span>
+      </div>
+
+      <div class="bg-white rounded-2xl p-4 sm:p-5 border border-stone-200/90 shadow-card space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-ink">Quick Guest Access</span>
+          <span class="text-[10px] font-semibold text-muted">100% Private • No email needed</span>
+        </div>
+
+        <div>
+          <label class="block text-[11px] font-bold uppercase tracking-wider text-muted mb-2">1. Pick Your Academic Level</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5" id="level-selector-grid">
+            <button type="button" onclick="selectOnboardingLevel('Class 11')" data-level="Class 11" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Class 11</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Class 12')" data-level="Class 12" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-ink text-cream border-ink"><div class="text-xs font-bold">Class 12</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Diploma')" data-level="Diploma" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Diploma</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Degree (UG)')" data-level="Degree (UG)" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">BBA / BCA / B.Com / BA / BS</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Medical')" data-level="Medical" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Medical &amp; Health</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Professional')" data-level="Professional" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Professional (CA/Law)</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Masters & PhD')" data-level="Masters & PhD" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Masters &amp; PhD</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Open University')" data-level="Open University" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Harvard / MIT Open</div></button>
+          </div>
+        </div>
+
+        <div>
+          <label for="onboard-stream" class="block text-[11px] font-bold uppercase tracking-wider text-muted mb-2">2. Pick Your Degree, Program or Topic</label>
+          <select id="onboard-stream" class="w-full bg-cream border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-ink">
+            <option value="All Programs">All Programs &amp; Global Trending Topics</option>
+            <option value="Medical & Health">Medical, Nursing &amp; Pharmacy</option>
+            <option value="BBA & MBA Management">BBA / MBA &amp; Business Management</option>
+            <option value="BCA & Computer Science">BCA / B.Tech &amp; Computer Science</option>
+            <option value="B.Com & Finance">B.Com, Accounting &amp; CA/CFA Finance</option>
+            <option value="BA, Law & Humanities">BA, Law, History &amp; Political Theory</option>
+            <option value="BS & Core Sciences">BS, Physics, Chemistry &amp; Math</option>
+            <option value="Engineering & Diploma">Diploma &amp; Engineering (Mech, Civil, ECE)</option>
+            <option value="Masters & PhD Research">Masters &amp; PhD Research Methodology</option>
+            <option value="AI & Data Science">Trending: AI &amp; Neural Networks</option>
+            <option value="Psychology & Mind">Trending: Psychology &amp; Mind</option>
+            <option value="Cybersecurity">Trending: Cybersecurity &amp; Privacy</option>
+          </select>
+        </div>
+
+        <button type="button" onclick="startAsGuest()" class="w-full py-3.5 rounded-2xl bg-ink hover:bg-stone-800 text-cream font-bold text-sm shadow-soft transition">
+          Continue as Guest (Instant Free Access) -&gt;
+        </button>
+      </div>
+
+      <div class="bg-sand/75 rounded-2xl p-4 border border-stone-200/80 mt-4">
+        <div class="flex items-center justify-between gap-2">
+          <div>
+            <h3 class="text-xs font-bold text-ink">Create a Free Student Account (Email)</h3>
+            <p class="text-[11px] text-muted">Save study boards, track quiz scores &amp; earn contributor badges.</p>
+          </div>
+          <button type="button" id="toggle-create-account-btn" onclick="toggleAccountForm()" class="px-3.5 py-2 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 text-xs font-bold text-ink shrink-0">Create Account</button>
+        </div>
+
+        <form id="new-account-form" onsubmit="completeAccountCreation(event)" class="hidden mt-4 pt-3.5 border-t border-stone-200/80 space-y-3 fade-in">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <input type="text" id="onboard-name" required placeholder="Full Name *" class="w-full bg-white border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+            <input type="email" id="onboard-email" required placeholder="you@university.edu *" class="w-full bg-white border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+            <input type="password" id="onboard-password" required minlength="4" placeholder="Password *" class="w-full bg-white border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+          </div>
+          <button type="submit" class="w-full py-2.5 rounded-xl bg-lavender-bg text-lavender-text border border-lavender-border font-bold text-xs">
+            Create Free Email Account &amp; Explore -&gt;
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Note Preview, Flashcard & Quiz Modal -->
+  <div id="note-modal" class="hidden fixed inset-0 z-40 bg-ink/45 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4 no-print">
+    <div class="bg-cream w-full max-w-2xl max-h-[92vh] rounded-t-[28px] sm:rounded-[28px] shadow-2xl border border-stone-200 flex flex-col overflow-hidden pop-in">
+      <div class="px-5 py-3.5 bg-white border-b border-stone-100 flex items-center justify-between gap-2">
+        <button onclick="closeNoteModal()" class="px-3 py-1.5 -ml-2 rounded-full hover:bg-sand text-ink text-xs font-bold">&lt;- Close</button>
+        <div class="flex items-center gap-1.5">
+          <button onclick="cycleReadingFontSize()" class="px-2.5 py-1 rounded-full bg-sand hover:bg-stone-200 text-ink text-[11px] font-bold">Aa+</button>
+          <button onclick="toggleReadingFontStyle()" class="px-2.5 py-1 rounded-full bg-sand hover:bg-stone-200 text-ink text-[11px] font-bold">Font</button>
+          <div class="flex items-center gap-1" id="modal-badges"></div>
+        </div>
+      </div>
+      <div class="px-5 py-2.5 bg-sand/70 border-b border-stone-200/70 flex items-center gap-2">
+        <button id="tab-read-notes" onclick="switchModalTab('notes')" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold bg-ink text-cream">Study Notes &amp; Formulas</button>
+        <button id="tab-flash-quiz" onclick="switchModalTab('quiz')" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold bg-white text-ink border border-stone-200">5-Min Flashcards &amp; Quiz</button>
+      </div>
+      <div id="modal-body" class="p-5 sm:p-7 overflow-y-auto space-y-5 no-scrollbar"></div>
+      <div id="modal-actions" class="p-4 bg-white border-t border-stone-100 flex flex-wrap items-center gap-2.5"></div>
+    </div>
+  </div>
+
+  <div id="printable-sheet" class="hidden"></div>
+
+  <div id="install-modal" class="hidden fixed inset-0 z-50 bg-ink/45 backdrop-blur-xs flex items-center justify-center p-4 no-print">
+    <div class="bg-cream w-full max-w-md rounded-[28px] p-6 shadow-2xl border border-stone-200 pop-in">
+      <div class="flex items-center justify-between mb-3">
+        <span class="px-3 py-1 rounded-full bg-lavender-bg text-lavender-text text-xs font-bold">Cross-Platform App</span>
+        <button onclick="closeInstallModal()" class="p-1.5 rounded-full hover:bg-sand text-muted">x</button>
+      </div>
+      <h3 class="font-serif text-xl font-bold text-ink mb-2">Install NoteNest</h3>
+      <p class="text-xs text-muted mb-4">On iOS Safari: Share -&gt; Add to Home Screen. On Android/Desktop Chrome: Menu/Address bar -&gt; Install App.</p>
+      <button onclick="closeInstallModal()" class="w-full py-3 rounded-2xl bg-ink text-cream font-bold text-xs">Got it</button>
+    </div>
+  </div>
+
+  <div id="feedback-modal" class="hidden fixed inset-0 z-50 bg-ink/45 backdrop-blur-xs flex items-center justify-center p-4 no-print">
+    <div class="bg-cream w-full max-w-sm rounded-[24px] p-6 shadow-2xl border border-stone-200 pop-in">
+      <h3 class="font-serif text-xl font-bold text-ink mb-2">Share your thoughts</h3>
+      <form onsubmit="submitFeedback(event)" class="space-y-3">
+        <textarea id="feedback-input" required rows="3" placeholder="What should we add or improve?" class="w-full rounded-2xl bg-white border border-stone-200 p-3 text-sm"></textarea>
+        <div class="flex gap-2">
+          <button type="button" onclick="closeFeedbackModal()" class="flex-1 py-2.5 rounded-xl bg-sand text-ink font-bold text-xs">Cancel</button>
+          <button type="submit" class="flex-1 py-2.5 rounded-xl bg-ink text-cream font-bold text-xs">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="hidden fixed bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 z-50 bg-ink text-cream px-4 py-2.5 rounded-full shadow-xl text-xs font-semibold pop-in no-print">
+    <span id="toast-message">Action completed!</span>
+  </div>
+
+
+  <!-- Guest-First Onboarding Modal -->
+  <div id="onboarding-modal" class="hidden fixed inset-0 z-40 bg-ink/50 backdrop-blur-xs flex items-center justify-center p-4 no-print">
+    <div class="bg-cream w-full max-w-xl rounded-[28px] p-6 sm:p-7 shadow-2xl border border-stone-200 pop-in max-h-[92vh] overflow-y-auto no-scrollbar">
+      <div class="flex items-center justify-between mb-4">
+        <div>
+          <h2 class="font-serif text-2xl font-bold text-ink leading-tight">Welcome to NoteNest</h2>
+          <p class="text-xs text-muted">Active study hub • 14,800+ learners • All branches &amp; trending topics</p>
+        </div>
+        <span class="px-2.5 py-1 rounded-full bg-sage-bg text-sage-text text-[10px] font-bold">Free Worldwide</span>
+      </div>
+
+      <div class="bg-white rounded-2xl p-4 sm:p-5 border border-stone-200/90 shadow-card space-y-4">
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-ink">Quick Guest Access</span>
+          <span class="text-[10px] font-semibold text-muted">100% Private • No email needed</span>
+        </div>
+
+        <div>
+          <label class="block text-[11px] font-bold uppercase tracking-wider text-muted mb-2">1. Pick Your Academic Level</label>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-1.5" id="level-selector-grid">
+            <button type="button" onclick="selectOnboardingLevel('Class 11')" data-level="Class 11" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Class 11</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Class 12')" data-level="Class 12" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-ink text-cream border-ink"><div class="text-xs font-bold">Class 12</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Diploma')" data-level="Diploma" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Diploma</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Degree (UG)')" data-level="Degree (UG)" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">BBA / BCA / B.Com / BA / BS</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Medical')" data-level="Medical" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Medical &amp; Health</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Professional')" data-level="Professional" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Professional (CA/Law)</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Masters & PhD')" data-level="Masters & PhD" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Masters &amp; PhD</div></button>
+            <button type="button" onclick="selectOnboardingLevel('Open University')" data-level="Open University" class="level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink"><div class="text-xs font-bold">Harvard / MIT Open</div></button>
+          </div>
+        </div>
+
+        <div>
+          <label for="onboard-stream" class="block text-[11px] font-bold uppercase tracking-wider text-muted mb-2">2. Pick Your Degree, Program or Topic</label>
+          <select id="onboard-stream" class="w-full bg-cream border border-stone-200 rounded-xl px-3.5 py-2.5 text-xs sm:text-sm font-semibold text-ink">
+            <option value="All Programs">All Programs &amp; Global Trending Topics</option>
+            <option value="Medical & Health">Medical, Nursing &amp; Pharmacy</option>
+            <option value="BBA & MBA Management">BBA / MBA &amp; Business Management</option>
+            <option value="BCA & Computer Science">BCA / B.Tech &amp; Computer Science</option>
+            <option value="B.Com & Finance">B.Com, Accounting &amp; CA/CFA Finance</option>
+            <option value="BA, Law & Humanities">BA, Law, History &amp; Political Theory</option>
+            <option value="BS & Core Sciences">BS, Physics, Chemistry &amp; Math</option>
+            <option value="Engineering & Diploma">Diploma &amp; Engineering (Mech, Civil, ECE)</option>
+            <option value="Masters & PhD Research">Masters &amp; PhD Research Methodology</option>
+            <option value="AI & Data Science">Trending: AI &amp; Neural Networks</option>
+            <option value="Psychology & Mind">Trending: Psychology &amp; Mind</option>
+            <option value="Cybersecurity">Trending: Cybersecurity &amp; Privacy</option>
+          </select>
+        </div>
+
+        <button type="button" onclick="startAsGuest()" class="w-full py-3.5 rounded-2xl bg-ink hover:bg-stone-800 text-cream font-bold text-sm shadow-soft transition">
+          Continue as Guest (Instant Free Access) -&gt;
+        </button>
+      </div>
+
+      <div class="bg-sand/75 rounded-2xl p-4 border border-stone-200/80 mt-4">
+        <div class="flex items-center justify-between gap-2">
+          <div>
+            <h3 class="text-xs font-bold text-ink">Create a Free Student Account (Email)</h3>
+            <p class="text-[11px] text-muted">Save study boards, track quiz scores &amp; earn contributor badges.</p>
+          </div>
+          <button type="button" id="toggle-create-account-btn" onclick="toggleAccountForm()" class="px-3.5 py-2 rounded-xl bg-white hover:bg-stone-100 border border-stone-200 text-xs font-bold text-ink shrink-0">Create Account</button>
+        </div>
+
+        <form id="new-account-form" onsubmit="completeAccountCreation(event)" class="hidden mt-4 pt-3.5 border-t border-stone-200/80 space-y-3 fade-in">
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <input type="text" id="onboard-name" required placeholder="Full Name *" class="w-full bg-white border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+            <input type="email" id="onboard-email" required placeholder="you@university.edu *" class="w-full bg-white border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+            <input type="password" id="onboard-password" required minlength="4" placeholder="Password *" class="w-full bg-white border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+          </div>
+          <button type="submit" class="w-full py-2.5 rounded-xl bg-lavender-bg text-lavender-text border border-lavender-border font-bold text-xs">
+            Create Free Email Account &amp; Explore -&gt;
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Note Preview, Flashcard & Quiz Modal -->
+  <div id="note-modal" class="hidden fixed inset-0 z-40 bg-ink/45 backdrop-blur-xs flex items-end sm:items-center justify-center p-0 sm:p-4 no-print">
+    <div class="bg-cream w-full max-w-2xl max-h-[92vh] rounded-t-[28px] sm:rounded-[28px] shadow-2xl border border-stone-200 flex flex-col overflow-hidden pop-in">
+      <div class="px-5 py-3.5 bg-white border-b border-stone-100 flex items-center justify-between gap-2">
+        <button onclick="closeNoteModal()" class="px-3 py-1.5 -ml-2 rounded-full hover:bg-sand text-ink text-xs font-bold">&lt;- Close</button>
+        <div class="flex items-center gap-1.5">
+          <button onclick="cycleReadingFontSize()" class="px-2.5 py-1 rounded-full bg-sand hover:bg-stone-200 text-ink text-[11px] font-bold">Aa+</button>
+          <button onclick="toggleReadingFontStyle()" class="px-2.5 py-1 rounded-full bg-sand hover:bg-stone-200 text-ink text-[11px] font-bold">Font</button>
+          <div class="flex items-center gap-1" id="modal-badges"></div>
+        </div>
+      </div>
+      <div class="px-5 py-2.5 bg-sand/70 border-b border-stone-200/70 flex items-center gap-2">
+        <button id="tab-read-notes" onclick="switchModalTab('notes')" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold bg-ink text-cream">Study Notes &amp; Formulas</button>
+        <button id="tab-flash-quiz" onclick="switchModalTab('quiz')" class="flex-1 py-2 px-3 rounded-xl text-xs font-bold bg-white text-ink border border-stone-200">5-Min Flashcards &amp; Quiz</button>
+      </div>
+      <div id="modal-body" class="p-5 sm:p-7 overflow-y-auto space-y-5 no-scrollbar"></div>
+      <div id="modal-actions" class="p-4 bg-white border-t border-stone-100 flex flex-wrap items-center gap-2.5"></div>
+    </div>
+  </div>
+
+  <div id="printable-sheet" class="hidden"></div>
+
+  <div id="install-modal" class="hidden fixed inset-0 z-50 bg-ink/45 backdrop-blur-xs flex items-center justify-center p-4 no-print">
+    <div class="bg-cream w-full max-w-md rounded-[28px] p-6 shadow-2xl border border-stone-200 pop-in">
+      <div class="flex items-center justify-between mb-3">
+        <span class="px-3 py-1 rounded-full bg-lavender-bg text-lavender-text text-xs font-bold">Cross-Platform App</span>
+        <button onclick="closeInstallModal()" class="p-1.5 rounded-full hover:bg-sand text-muted">x</button>
+      </div>
+      <h3 class="font-serif text-xl font-bold text-ink mb-2">Install NoteNest</h3>
+      <p class="text-xs text-muted mb-4">On iOS Safari: Share -&gt; Add to Home Screen. On Android/Desktop Chrome: Menu/Address bar -&gt; Install App.</p>
+      <button onclick="closeInstallModal()" class="w-full py-3 rounded-2xl bg-ink text-cream font-bold text-xs">Got it</button>
+    </div>
+  </div>
+
+  <div id="feedback-modal" class="hidden fixed inset-0 z-50 bg-ink/45 backdrop-blur-xs flex items-center justify-center p-4 no-print">
+    <div class="bg-cream w-full max-w-sm rounded-[24px] p-6 shadow-2xl border border-stone-200 pop-in">
+      <h3 class="font-serif text-xl font-bold text-ink mb-2">Share your thoughts</h3>
+      <form onsubmit="submitFeedback(event)" class="space-y-3">
+        <textarea id="feedback-input" required rows="3" placeholder="What should we add or improve?" class="w-full rounded-2xl bg-white border border-stone-200 p-3 text-sm"></textarea>
+        <div class="flex gap-2">
+          <button type="button" onclick="closeFeedbackModal()" class="flex-1 py-2.5 rounded-xl bg-sand text-ink font-bold text-xs">Cancel</button>
+          <button type="submit" class="flex-1 py-2.5 rounded-xl bg-ink text-cream font-bold text-xs">Send</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="toast" class="hidden fixed bottom-20 md:bottom-8 left-1/2 -translate-x-1/2 z-50 bg-ink text-cream px-4 py-2.5 rounded-full shadow-xl text-xs font-semibold pop-in no-print">
+    <span id="toast-message">Action completed!</span>
+  </div>
+
+
+                                  
+  <body class="min-h-screen flex flex-col bg-cream text-ink selection:bg-lavender-bg selection:text-lavender-text">
+
+    <!-- Opening 3D Bird-on-Books Logo Splash -->
+      <div id="splash-logo-overlay" onclick="dismissSplashLogo()" class="fixed inset-0 z-50 bg-cream flex flex-col items-center justify-center p-6 transition-opacity duration-500 cursor-pointer no-print">
+          <div class="splash-float flex flex-col items-center text-center max-w-xs pop-in">
+                <div class="w-32 h-32 rounded-[36px] bg-white border border-stone-200/90 shadow-soft flex items-center justify-center mb-4">
+                        <svg viewBox="0 0 140 140" class="w-28 h-28" aria-label="NoteNest cute 3D songbird sitting on books">
+                                  <defs>
+                                              <linearGradient id="splashBirdBody" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                            <stop offset="0%" stop-color="#F7ECFF" />
+                                                                          <stop offset="65%" stop-color="#D9C8F5" />
+                                                                                        <stop offset="100%" stop-color="#B9A2E6" />
+                                                                                                    </linearGradient>
+                                                                                                                <linearGradient id="splashWingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                                                                                                              <stop offset="0%" stop-color="#EFF8FF" />
+                                                                                                                                            <stop offset="100%" stop-color="#BCE0F7" />
+                                                                                                                                                        </linearGradient>
+                                                                                                                                                                    <linearGradient id="splashBookTop" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                                                                                                                                                  <stop offset="0%" stop-color="#FFF9E6" />
+                                                                                                                                                                                                <stop offset="100%" stop-color="#F3DF9E" />
+                                                                                                                                                                                                            </linearGradient>
+                                                                                                                                                                                                                        <linearGradient id="splashBookBottom" x1="0%" y1="0%" x2="100%" y2="0%">
+                                                                                                                                                                                                                                      <stop offset="0%" stop-color="#EEF8EE" />
+                                                                                                                                                                                                                                                    <stop offset="100%" stop-color="#C3E1C3" />
+                                                                                                                                                                                                                                                                </linearGradient>
+                                                                                                                                                                                                                                                                          </defs>
+                                                                                                                                                                                                                                                                                    <ellipse cx="70" cy="116" rx="44" ry="7" fill="#242120" opacity="0.1" />
+                                                                                                                                                                                                                                                                                              <rect x="24" y="94" width="92" height="17" rx="6" fill="url(#splashBookBottom)" stroke="#355439" stroke-width="2.5" />
+                                                                                                                                                                                                                                                                                                        <path d="M31 94 H109" stroke="#355439" stroke-width="1.5" stroke-dasharray="3 3" />
+                                                                                                                                                                                                                                                                                                                  <rect x="31" y="77" width="78" height="17" rx="6" fill="url(#splashBookTop)" stroke="#735C1E" stroke-width="2.5" />
+                                                                                                                                                                                                                                                                                                                            <path d="M38 77 H102" stroke="#735C1E" stroke-width="1.5" stroke-dasharray="3 3" />
+                                                                                                                                                                                                                                                                                                                                      <ellipse cx="68" cy="59" rx="19" ry="18" fill="url(#splashBirdBody)" stroke="#514173" stroke-width="2.5" />
+                                                                                                                                                                                                                                                                                                                                                <circle cx="81" cy="46" r="12" fill="url(#splashBirdBody)" stroke="#514173" stroke-width="2.5" />
+                                                                                                                                                                                                                                                                                                                                                          <circle cx="78" cy="42" r="4.5" fill="#FFFFFF" opacity="0.55" />
+                                                                                                                                                                                                                                                                                                                                                                    <circle cx="79" cy="52" r="3.2" fill="#F7E7E8" opacity="0.85" />
+                                                                                                                                                                                                                                                                                                                                                                              <polygon points="92,45 103,48.5 92,52" fill="#F3D4C3" stroke="#7D452B" stroke-width="2" stroke-linejoin="round" />
+                                                                                                                                                                                                                                                                                                                                                                                        <circle cx="84" cy="43.5" r="2.4" fill="#242120" />
+                                                                                                                                                                                                                                                                                                                                                                                                  <circle cx="84.8" cy="42.6" r="0.9" fill="#FFFFFF" />
+                                                                                                                                                                                                                                                                                                                                                                                                            <path d="M58 56 Q46 61 52 71 Q61 70 65 61 Z" fill="url(#splashWingGrad)" stroke="#2E5873" stroke-width="2" stroke-linejoin="round" />
+                                                                                                                                                                                                                                                                                                                                                                                                                      <path d="M62 76 L60 77.5 M75 76 L77 77.5" stroke="#7D452B" stroke-width="2.6" stroke-linecap="round" />
+                                                                                                                                                                                                                                                                                                                                                                                                                              </svg>
+                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                          <h1 class="font-serif text-3xl font-bold text-ink tracking-tight">NoteNest</h1>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                <p class="text-xs text-muted mt-1">Open-Access Study Notes • 11 Branches &amp; Trending Topics</p>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      <span class="mt-4 text-[11px] font-semibold text-muted">Tap anywhere to enter</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                          </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                              <header class="sticky top-0 z-30 bg-cream/95 backdrop-blur-md border-b border-stone-200/70 no-print">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-3">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="flex items-center gap-2.5 cursor-pointer shrink-0" onclick="navigateTo('home')">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <div class="w-10 h-10 rounded-2xl bg-white border border-stone-200 flex items-center justify-center shadow-sm">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <svg viewBox="0 0 140 140" class="w-8 h-8" aria-hidden="true">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <rect x="24" y="94" width="92" height="17" rx="6" fill="#CFE0CF" stroke="#355439" stroke-width="3" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <rect x="31" y="77" width="78" height="17" rx="6" fill="#F5E5B3" stroke="#735C1E" stroke-width="3" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <ellipse cx="68" cy="59" rx="19" ry="18" fill="#DDD3F0" stroke="#514173" stroke-width="3" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <circle cx="81" cy="46" r="12" fill="#DDD3F0" stroke="#514173" stroke-width="3" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <polygon points="92,45 103,48.5 92,52" fill="#F3D4C3" stroke="#7D452B" stroke-width="2.4" stroke-linejoin="round" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <circle cx="84" cy="43.5" r="2.5" fill="#242120" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <circle cx="84.8" cy="42.6" r="1" fill="#FFFFFF" />
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </svg>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <div class="flex items-center gap-1.5">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-ink block leading-none">NoteNest</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <span class="hidden sm:inline-flex items-center px-2 py-0.5 rounded-full bg-sage-bg text-sage-text text-[9px] font-bold border border-sage-border">14.8k+ Learners</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <span id="header-level-subtitle" class="text-[11px] text-muted font-medium block mt-0.5 truncate max-w-[180px] sm:max-w-[260px]">Guest Study Hub</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <nav class="hidden md:flex items-center gap-1.5 bg-sand/80 p-1.5 rounded-full border border-stone-200/70">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <button id="desk-nav-home" onclick="navigateTo('home')" class="px-4 py-1.5 rounded-full text-xs font-bold transition bg-ink text-cream flex items-center gap-1.5">Explore Feed</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <button id="desk-nav-upload" onclick="navigateTo('upload')" class="px-4 py-1.5 rounded-full text-xs font-bold transition text-muted hover:text-ink flex items-center gap-1.5">+ Upload Note</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <button id="desk-nav-profile" onclick="navigateTo('profile')" class="px-4 py-1.5 rounded-full text-xs font-bold transition text-muted hover:text-ink flex items-center gap-1.5">Profile &amp; Earnings</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <button id="desk-nav-saved" onclick="navigateTo('saved')" class="px-4 py-1.5 rounded-full text-xs font-bold transition text-muted hover:text-ink flex items-center gap-1.5">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <span>Saved</span><span id="desk-saved-count" class="px-1.5 py-0.5 rounded-full bg-rose-bg text-rose-text text-[10px]">0</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <button id="desk-nav-deals" onclick="navigateTo('deals')" class="px-4 py-1.5 rounded-full text-xs font-bold transition text-muted hover:text-ink flex items-center gap-1.5">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <span>Deals</span><span class="px-1.5 py-0.5 rounded-full bg-butter-bg text-butter-text text-[10px]">Support</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </nav>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <div class="flex items-center gap-2 shrink-0">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <button id="install-app-btn" onclick="openInstallModal()" class="px-3.5 py-2 rounded-full bg-lavender-bg hover:brightness-95 active:scale-95 transition text-xs font-bold text-lavender-text border border-lavender-border">Install App</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <button onclick="openFeedbackModal()" class="px-3.5 py-2 rounded-full bg-sand hover:bg-stone-200/80 active:scale-95 transition text-xs font-semibold text-ink border border-stone-200/80">Feedback</button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      </header>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <main id="main-content" class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-28 md:pb-12"></main>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <nav class="md:hidden fixed bottom-0 inset-x-0 z-30 bg-white/95 backdrop-blur-md border-t border-stone-200/80 shadow-nav px-2 py-1.5 no-print">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <div class="max-w-md mx-auto grid grid-cols-5 items-center text-center">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <button id="mob-nav-home" onclick="navigateTo('home')" class="flex flex-col items-center gap-1 p-2 rounded-2xl bg-sand text-ink transition relative"><span class="text-[10px] font-bold">Explore</span></button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <button id="mob-nav-upload" onclick="navigateTo('upload')" class="flex flex-col items-center gap-1 p-2 rounded-2xl text-muted transition relative"><span class="text-[10px] font-bold">Upload</span></button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <button id="mob-nav-profile" onclick="navigateTo('profile')" class="flex flex-col items-center gap-1 p-2 rounded-2xl text-muted transition relative"><span class="text-[10px] font-bold">Profile</span></button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <button id="mob-nav-saved" onclick="navigateTo('saved')" class="flex flex-col items-center gap-1 p-2 rounded-2xl text-muted transition relative">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              <span id="mob-saved-badge" class="hidden absolute top-0.5 right-2 px-1.5 py-0.5 rounded-full bg-rose-bg text-rose-text text-[9px] font-bold border border-rose-border">0</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <span class="text-[10px] font-bold">Saved</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <button id="mob-nav-deals" onclick="navigateTo('deals')" class="flex flex-col items-center gap-1 p-2 rounded-2xl text-muted transition relative">
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <span class="absolute top-1.5 right-3 w-2 h-2 rounded-full bg-amber-500"></span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <span class="text-[10px] font-bold">Deals</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        </button>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              </nav>
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  
+  <script>
+    const STREAM_STYLES = {
+      'Medical & Health': { bg: 'bg-sage-bg', text: 'text-sage-text', border: 'border-sage-border', tint: 'bg-[#F7FBF7]', icon: '🩺' },
+      'BBA & MBA Management': { bg: 'bg-butter-bg', text: 'text-butter-text', border: 'border-butter-border', tint: 'bg-[#FEFDF7]', icon: '💼' },
+      'BCA & Computer Science': { bg: 'bg-lavender-bg', text: 'text-lavender-text', border: 'border-lavender-border', tint: 'bg-[#FAF8FD]', icon: '💻' },
+      'B.Com & Finance': { bg: 'bg-peach-bg', text: 'text-peach-text', border: 'border-peach-border', tint: 'bg-[#FDF9F6]', icon: '📊' },
+      'BA, Law & Humanities': { bg: 'bg-rose-bg', text: 'text-rose-text', border: 'border-rose-border', tint: 'bg-[#FDF8F8]', icon: '🏛️' },
+      'BS & Core Sciences': { bg: 'bg-sky-bg', text: 'text-sky-text', border: 'border-sky-border', tint: 'bg-[#F6FAFD]', icon: '🔬' },
+      'Engineering & Diploma': { bg: 'bg-lavender-bg', text: 'text-lavender-text', border: 'border-lavender-border', tint: 'bg-[#FAF8FD]', icon: '⚙️' },
+      'Masters & PhD Research': { bg: 'bg-peach-bg', text: 'text-peach-text', border: 'border-peach-border', tint: 'bg-[#FDF9F6]', icon: '🎓' },
+      'AI & Data Science': { bg: 'bg-lavender-bg', text: 'text-lavender-text', border: 'border-lavender-border', tint: 'bg-[#FAF8FD]', icon: '🤖' },
+      'Psychology & Mind': { bg: 'bg-rose-bg', text: 'text-rose-text', border: 'border-rose-border', tint: 'bg-[#FDF8F8]', icon: '🧠' },
+      'Cybersecurity': { bg: 'bg-sky-bg', text: 'text-sky-text', border: 'border-sky-border', tint: 'bg-[#F6FAFD]', icon: '🛡️' }
+    };
+
+    const DEFAULT_NOTES = [
+      { id: 'med-1', title: 'MBBS / Medical: Cranial Nerves & Cardiac Cycle', institution: 'Open Medical Atlas', level: 'Medical', stream: 'Medical & Health', trending: true, verifiedContributor: true, author: 'Dr. Ananya Rao', views: 12840, fileType: 'Printable Sheet', summary: 'Covers 12 cranial nerves, Circle of Willis, and Frank-Starling preload dynamics.', keyPoints: ['CN III palsy causes down-and-out eye deviation and mydriasis.', 'Circle of Willis protects collateral cerebral blood flow.'], example: 'High-yield clinical check: review CN III, IV, and VI eye movements.', flashcards: [{ q: 'Which nerve controls pupillary constriction?', a: 'Cranial Nerve III (Oculomotor).' }, { q: 'What is Frank-Starling preload?', a: 'End-diastolic ventricular stretch driving stroke volume.' }], quiz: { question: 'Which ring supplies collateral blood flow at the brain base?', options: ['Circle of Willis', 'Coronary Sinus', 'Portal Triad'], answerIndex: 0 } },
+      { id: 'med-2', title: 'Trending Clinical & Public Health: AI Triage & Conformal Uncertainty', institution: 'Health Informatics Hub', level: 'Open University', stream: 'Medical & Health', trending: true, verifiedContributor: true, author: 'Dr. Kabir Menon', views: 9420, fileType: 'Printable Sheet', summary: 'How clinical decision support flags low-confidence predictions across hospital scanners.', keyPoints: ['Conformal prediction sets provide finite-sample coverage guarantees.', 'Always audit domain shift when moving from urban to rural clinics.'], example: 'Route uncertain triage cases to human clinicians instead of forcing top-1 picks.', flashcards: [{ q: 'Why use uncertainty sets in triage?', a: 'To flag ambiguous scans for clinician review.' }], quiz: { question: 'What helps catch accuracy drops across different scanner models?', options: ['Domain-shift & calibration checks', 'Ignoring confidence scores', 'Removing validation sets'], answerIndex: 0 } },
+      { id: 'bba-1', title: 'BBA / MBA: Marketing 4Ps & Porter’s Five Forces', institution: 'BBA Core', level: 'Degree (UG)', stream: 'BBA & MBA Management', trending: false, verifiedContributor: true, author: 'Riya Sharma', views: 8450, fileType: 'Printable Sheet', summary: 'Core management notes on Product, Price, Place, Promotion, and industry competition.', keyPoints: ['4Ps: Product, Price, Place, Promotion.', 'Porter’s Five Forces evaluate competitive intensity and bargaining power.'], example: 'Compare price skimming vs penetration pricing on a new launch.', flashcards: [{ q: 'What are the 4Ps?', a: 'Product, Price, Place, and Promotion.' }], quiz: { question: 'High initial pricing lowered over time is called:', options: ['Penetration Pricing', 'Price Skimming', 'Bundle Pricing'], answerIndex: 1 } },
+      { id: 'bba-2', title: 'Trending Management: AI Co-Pilots, Unit Economics & Retention', institution: 'Strategy & Product Lab', level: 'Masters & PhD', stream: 'BBA & MBA Management', trending: true, verifiedContributor: true, author: 'Siddharth Kulkarni', views: 10310, fileType: 'Printable Sheet', summary: 'Evaluating SaaS/AI gross margins, inference token costs, and net dollar retention.', keyPoints: ['Token and compute costs directly impact recurring gross margin.', 'Net Revenue Retention (NRR) above 100% signals expansion strength.'], example: 'Model cost per active workflow rather than raw API call volume.', flashcards: [{ q: 'What does NRR > 100% indicate?', a: 'Expansion revenue exceeds churn and contraction.' }], quiz: { question: 'Which cost is unique to AI-enabled workflows?', options: ['Model inference & token compute', 'Office lease only', 'Paper stationery'], answerIndex: 0 } },
+      { id: 'bca-1', title: 'BCA / CS: Data Structures, ACID & Normalization', institution: 'BCA Study Guild', level: 'Degree (UG)', stream: 'BCA & Computer Science', trending: true, verifiedContributor: true, author: 'Arjun Verma', views: 14190, fileType: 'Printable Sheet', summary: 'Covers Stacks/Queues, ACID transactions, and 1NF–3NF database design.', keyPoints: ['ACID: Atomicity, Consistency, Isolation, Durability.', '3NF removes transitive dependencies.'], example: 'Use parameterized queries to prevent SQL injection.', flashcards: [{ q: 'What does ACID stand for?', a: 'Atomicity, Consistency, Isolation, and Durability.' }], quiz: { question: 'Which structure is LIFO?', options: ['Queue', 'Stack', 'Tree'], answerIndex: 1 } },
+      { id: 'bca-2', title: 'Trending CS: Distributed Systems, Event Loops & RAG Pipelines', institution: 'Systems & Cloud Guild', level: 'Open University', stream: 'BCA & Computer Science', trending: true, verifiedContributor: true, author: 'Nandini Iyer', views: 11260, fileType: 'Printable Sheet', summary: 'Idempotency keys, chunking trade-offs, and latency budgets in modern web apps.', keyPoints: ['Idempotency keys prevent duplicate charges on retries.', 'Hybrid lexical + dense retrieval improves domain lookups.'], example: 'Log retrieval scores and citation grounding on every query.', flashcards: [{ q: 'Why use idempotency keys?', a: 'To safely deduplicate retried requests.' }], quiz: { question: 'Which practice reduces ungrounded answers in retrieval apps?', options: ['Source citations & grounding checks', 'Skipping evaluation', 'Hardcoding answers'], answerIndex: 0 } },
+      { id: 'bcom-1', title: 'B.Com & CA: Break-Even, Ratios & IFRS 15', institution: 'Commerce & Finance', level: 'Degree (UG)', stream: 'B.Com & Finance', trending: false, verifiedContributor: true, author: 'Meera Nair', views: 8890, fileType: 'Printable Sheet', summary: 'Break-even units, Current Ratio (2:1 ideal), and 5-step revenue recognition.', keyPoints: ['BEP (units) = Fixed Costs / Contribution per unit.', 'IFRS 15 recognizes revenue when control transfers.'], example: 'Calculate contribution margin before checking fixed-cost coverage.', flashcards: [{ q: 'Ideal Current Ratio benchmark?', a: '2 : 1.' }], quiz: { question: 'Equipment purchase for cash is an:', options: ['Operating flow', 'Investing flow', 'Financing flow'], answerIndex: 1 } },
+      { id: 'bcom-2', title: 'Trending Finance: Instant Payments, Fraud Controls & ESG Audit', institution: 'CA & FinTech Notes', level: 'Professional', stream: 'B.Com & Finance', trending: true, verifiedContributor: true, author: 'CA Vikram Joshi', views: 9740, fileType: 'Printable Sheet', summary: 'Real-time payment reconciliation, anomaly detection, and assurance readiness.', keyPoints: ['Real-time settlement requires automated ledger reconciliation.', 'Audit trails must preserve immutable timestamps and approvals.'], example: 'Flag out-of-pattern high-velocity transfers for step-up checks.', flashcards: [{ q: 'Why maintain immutable audit logs?', a: 'For forensic traceability and compliance.' }], quiz: { question: 'Reconciling instant transfers prevents:', options: ['Silent ledger mismatches', 'Tax filing', 'Inventory storage'], answerIndex: 0 } },
+      { id: 'law-1', title: 'BA, Law & Humanities: Constitutional Rights, Tort & Evidence', institution: 'Jurisprudence & Arts', level: 'Professional', stream: 'BA, Law & Humanities', trending: false, verifiedContributor: true, author: 'Adv. Kavya Deshmukh', views: 7650, fileType: 'Printable Sheet', summary: 'Proportionality in fundamental rights, duty of care in tort, and burden of proof.', keyPoints: ['Duty of care, breach, causation, and damages define negligence.', 'Proportionality balances legitimate aims against rights restrictions.'], example: 'Structure case briefs around Issue, Rule, Application, and Conclusion.', flashcards: [{ q: 'Four elements of negligence?', a: 'Duty, breach, causation, and damages.' }], quiz: { question: 'IRAC in legal writing stands for:', options: ['Issue, Rule, Application, Conclusion', 'Intent, Remedy, Appeal, Court', 'Index, Record, Act, Clause'], answerIndex: 0 } },
+      { id: 'law-2', title: 'Trending Law & Policy: AI Copyright, Deepfakes & Data Governance', institution: 'Digital Policy Digest', level: 'Degree (UG)', stream: 'BA, Law & Humanities', trending: true, verifiedContributor: true, author: 'Prof. Rohan Sen', views: 8930, fileType: 'Printable Sheet', summary: 'Synthetic media disclosure, consent boundaries, and algorithmic accountability.', keyPoints: ['Consent and purpose limitation anchor personal data governance.', 'Synthetic media creates verification and defamation challenges.'], example: 'Distinguish human authorship contributions from automated outputs.', flashcards: [{ q: 'Core principle of purpose limitation?', a: 'Use data only for stated, lawful purposes.' }], quiz: { question: 'Deepfake media primarily challenges:', options: ['Authenticity & verification', 'Printer ink capacity', 'Screen resolution'], answerIndex: 0 } },
+      { id: 'sci-1', title: 'Class 11–12 & BS: Calculus, Wave Optics & Thermodynamics', institution: 'Board & Core Science', level: 'Class 12', stream: 'BS & Core Sciences', trending: false, verifiedContributor: true, author: 'Aarav • Topper', views: 11420, fileType: 'Printable Sheet', summary: 'Key formulas for derivatives, interference fringe spacing, and entropy.', keyPoints: ['lim(x->0) [sin x / x] = 1.', 'Constructive interference occurs when path difference = n * lambda.'], example: 'Always write SI units and check dimensional consistency.', flashcards: [{ q: 'Value of lim(x->0) sin(x)/x?', a: '1.' }], quiz: { question: 'Path difference for nth bright fringe in YDSE is:', options: ['n * lambda', '(2n + 1) * lambda / 4', 'lambda / 8'], answerIndex: 0 } },
+      { id: 'sci-2', title: 'Class 11 Foundation: Kinematics, Mole Concept & Stoichiometry', institution: 'Foundations Board', level: 'Class 11', stream: 'BS & Core Sciences', trending: false, verifiedContributor: true, author: 'Diya Chatterjee', views: 6980, fileType: 'Printable Sheet', summary: 'Equations of motion, limiting reagents, and empirical vs molecular formulas.', keyPoints: ['Limiting reagent runs out first and caps product yield.', 'v^2 = u^2 + 2as applies for constant acceleration.'], example: 'Convert mass to moles before comparing stoichiometric ratios.', flashcards: [{ q: 'What defines a limiting reagent?', a: 'The reactant completely consumed first.' }], quiz: { question: 'Which equation links velocity, displacement, and constant acceleration?', options: ['v^2 = u^2 + 2as', 'PV = nRT', 'F = Gmm/r^2'], answerIndex: 0 } },
+      { id: 'eng-1', title: 'Diploma & Engineering: Mechanics, Circuits & Control Systems', institution: 'Polytechnic & B.Tech', level: 'Diploma', stream: 'Engineering & Diploma', trending: false, verifiedContributor: true, author: 'Karthik Gowda', views: 8340, fileType: 'Printable Sheet', summary: 'Simply supported beam bending, Kirchhoff laws, and stability poles.', keyPoints: ['Simply supported beam max bending moment = WL / 4.', 'KCL states algebraic sum of currents at a node is zero.'], example: 'Draw free-body diagrams before writing equilibrium equations.', flashcards: [{ q: 'Max bending moment for central load W on span L?', a: 'WL / 4.' }], quiz: { question: 'KCL is based on conservation of:', options: ['Electric charge', 'Magnetic flux', 'Angular momentum'], answerIndex: 0 } },
+      { id: 'eng-2', title: 'Trending Engineering: Edge Robotics, EV Thermal & Digital Twins', institution: 'Applied Engg Notes', level: 'Degree (UG)', stream: 'Engineering & Diploma', trending: true, verifiedContributor: true, author: 'Pranav Deshpande', views: 9610, fileType: 'Printable Sheet', summary: 'Sensor fusion, battery pack thermal management, and predictive maintenance.', keyPoints: ['Kalman filters fuse noisy sensor readings over time.', 'Thermal runaway prevention requires cell-level monitoring.'], example: 'Test edge controllers in simulation before hardware deployment.', flashcards: [{ q: 'What does sensor fusion achieve?', a: 'More reliable state estimates from multiple sensors.' }], quiz: { question: 'Which filter estimates state from noisy sequential measurements?', options: ['Kalman Filter', 'HTML Parser', 'CSS Grid'], answerIndex: 0 } },
+      { id: 'phd-1', title: 'Masters & PhD: PRISMA Reviews & IMRaD Structure', institution: 'Graduate Research', level: 'Masters & PhD', stream: 'Masters & PhD Research', trending: true, verifiedContributor: true, author: 'Dr. Elena Rostova', views: 10670, fileType: 'Printable Sheet', summary: 'Systematic review screening, construct/internal/external validity, and IMRaD papers.', keyPoints: ['PRISMA standardizes literature identification and screening.', 'IMRaD: Introduction, Methods, Results, Discussion.'], example: 'State your research gap clearly at the end of your literature review.', flashcards: [{ q: 'What does IMRaD stand for?', a: 'Introduction, Methods, Results, and Discussion.' }], quiz: { question: 'Generalizability to real populations is:', options: ['External Validity', 'Face Validity', 'Typo Check'], answerIndex: 0 } },
+      { id: 'ai-1', title: 'Trending AI & ML: LoRA Fine-Tuning, Agents & Benchmark Integrity', institution: 'ML Research Hub', level: 'Masters & PhD', stream: 'AI & Data Science', trending: true, verifiedContributor: true, author: 'Devika Nair', views: 15820, fileType: 'Printable Sheet', summary: 'Low-rank adaptation, agentic tool verification, and contamination/sycophancy checks.', keyPoints: ['LoRA updates low-rank matrices to cut trainable parameters.', 'Evaluate across multiple seeds and check for benchmark leakage.'], example: 'Measure task accuracy against latency and token cost per run.', flashcards: [{ q: 'How does LoRA reduce fine-tuning cost?', a: 'By training small low-rank adapter matrices.' }], quiz: { question: 'What should ML evaluations include beyond a single best run?', options: ['Multiple seeds & variance', 'Only cherry-picked prompts', 'Zero baselines'], answerIndex: 0 } },
+      { id: 'ai-2', title: 'Trending Vision & NLP: Deepfake Detection & Multimodal Embeddings', institution: 'Applied AI Studio', level: 'Degree (UG)', stream: 'AI & Data Science', trending: true, verifiedContributor: true, author: 'Harshvardhan Rao', views: 12150, fileType: 'Printable Sheet', summary: 'Facial manipulation forensics, compressed video robustness, and shared embeddings.', keyPoints: ['Heavy social-media video compression degrades forensic cues.', 'Contrastive embeddings align visual and text representations.'], example: 'Test detectors on compressed and unseen manipulation styles.', flashcards: [{ q: 'Why do deepfake detectors dip on social video?', a: 'Lossy compression blurs fine manipulation artifacts.' }], quiz: { question: 'Contrastive image-text models learn:', options: ['Shared embedding spaces', 'Manual CSS rules', 'Tape backups'], answerIndex: 0 } },
+      { id: 'psy-1', title: 'Trending Psychology: Digital Attention, Short Video & AI Companions', institution: 'Mind & Behavior Lab', level: 'Degree (UG)', stream: 'Psychology & Mind', trending: true, verifiedContributor: true, author: 'Tara Bhatia', views: 9870, fileType: 'Printable Sheet', summary: 'Working memory load, variable-reward feeds, and social connection dynamics.', keyPoints: ['Constant notifications fragment sustained attention and recall.', 'Pair self-report scales with objective screen-time or diary logs.'], example: 'Preregister hypotheses and power calculations before data collection.', flashcards: [{ q: 'Why combine surveys with behavioral logs?', a: 'To reduce recall and self-report bias.' }], quiz: { question: 'Variable-ratio reward schedules strongly sustain:', options: ['Repeated checking behavior', 'Immediate sleep', 'Calculator memory'], answerIndex: 0 } },
+      { id: 'psy-2', title: 'Clinical & Health Psychology: CBT Formulation & Stress Coping', institution: 'Behavioral Health Notes', level: 'Masters & PhD', stream: 'Psychology & Mind', trending: false, verifiedContributor: true, author: 'Dr. Sameer Kulkarni', views: 7540, fileType: 'Printable Sheet', summary: 'Cognitive distortions, behavioral activation, and validated screening tools.', keyPoints: ['Thoughts, emotions, physical sensations, and behaviors interact.', 'Structured behavioral experiments test unhelpful predictions.'], example: 'Track mood and sleep patterns consistently across weeks.', flashcards: [{ q: 'Core CBT link?', a: 'Thoughts, feelings, and behaviors influence one another.' }], quiz: { question: 'Testing a worry through real-world action is called a:', options: ['Behavioral experiment', 'Syntax check', 'Cache flush'], answerIndex: 0 } },
+      { id: 'sec-1', title: 'Trending Cybersecurity: Supply Chain Trust, OAuth & AI Security', institution: 'SecOps & Zero Trust', level: 'Open University', stream: 'Cybersecurity', trending: true, verifiedContributor: true, author: 'Aditya Kulkarni', views: 13490, fileType: 'Printable Sheet', summary: 'Third-party dependency risks, token scoping, and prompt/data leak defenses.', keyPoints: ['Compromised third-party tokens can bridge into connected apps.', 'Enforce least privilege, short-lived credentials, and MFA.'], example: 'Audit third-party integrations and exposed public endpoints regularly.', flashcards: [{ q: 'Principle of least privilege?', a: 'Grant only the minimum access needed for a task.' }], quiz: { question: 'Stolen OAuth tokens mainly threaten:', options: ['Authorized third-party access', 'Monitor brightness', 'Keyboard keycaps'], answerIndex: 0 } },
+      { id: 'sec-2', title: 'Trending Cryptography: Post-Quantum Migration & Zero Trust', institution: 'Crypto & NetSec Guild', level: 'Masters & PhD', stream: 'Cybersecurity', trending: true, verifiedContributor: true, author: 'Meghana Hegde', views: 9120, fileType: 'Printable Sheet', summary: 'Crypto-agility, TLS/key rotation, and continuous identity verification.', keyPoints: ['Crypto-agility lets systems swap algorithms without rewrites.', 'Never trust network location alone; verify identity and device posture.'], example: 'Inventory where long-lived keys and certificates are stored.', flashcards: [{ q: 'What is crypto-agility?', a: 'Ability to upgrade cryptographic algorithms smoothly.' }], quiz: { question: 'Zero Trust assumes breaches can occur:', options: ['Inside or outside the network', 'Only on Sundays', 'Never'], answerIndex: 0 } }
+    ];
+
+    const CREATOR_DEALS = [
+      { id: 'deal-1', category: 'Bonus Study Pack', badge: 'Bonus Pack • $4.99', commissionNote: '100% Direct Creator Revenue', title: 'Exam & GPA Planner + Active Recall Kit', description: 'Printable revision tracker and study planner created for students.', cta: 'Unlock Bonus Pack ->', payout: 4.99, bg: 'bg-butter-bg/75', border: 'border-butter-border', accent: 'text-butter-text' },
+      { id: 'deal-2', category: 'Affiliate Partner Deal', badge: '25% Student Off', commissionNote: '$2.40 Direct Affiliate Commission', title: 'Exam-Approved Scientific & Financial Calculator', description: 'Student discount link for exam-ready calculators.', cta: 'Claim Student Discount ->', payout: 2.40, bg: 'bg-sage-bg/75', border: 'border-sage-border', accent: 'text-sage-text' }
+    ];
+
+    let state = {
+      screen: 'home', selectedStream: 'All', selectedLevelFilter: 'All', trendingOnly: false, searchQuery: '',
+      notes: [], savedIds: [], viewHistory: [], user: null, onboardingLevel: 'Class 12',
+      lastUploadedNoteId: null, uploadedFileName: '', userUploadCount: 0,
+      activeNoteId: null, modalTab: 'notes', flashcardIndex: 0, flashcardFlipped: false, quizSelectedOption: null,
+      readingFontSize: 'normal', readingFontSans: false, deals: [], bundleSuggestions: [], feedbackList: [],
+      supportConfig: { upiId: 'notenest.creator@upi', paymentUrl: 'https://pay.notenest.app/support' },
+      creatorRevenue: { dealsViewed: 1420, dealsClaimed: 186, tipsCount: 48, affiliateEarnings: 214.80, bundleSales: 164.67, tipsTotal: 142.00 }
+    };
+
+    function safeParse(key, fallback) {
+      try {
+        const raw = localStorage.getItem(key);
+        return raw ? JSON.parse(raw) : fallback;
+      } catch (e) {
+        return fallback;
+      }
+    }
+
+    function loadState() {
+      state.notes = safeParse('nn_notes', DEFAULT_NOTES) || DEFAULT_NOTES;
+      state.savedIds = safeParse('nn_saved', ['med-1', 'ai-1']) || ['med-1', 'ai-1'];
+      state.viewHistory = safeParse('nn_hist', []) || [];
+      state.user = safeParse('nn_user', null);
+      state.deals = safeParse('nn_deals', CREATOR_DEALS) || CREATOR_DEALS;
+      state.bundleSuggestions = safeParse('nn_sug', [
+        { id: 's1', title: 'Class 12 Physics & Calculus Formula Sheet', level: 'Class 12', note: 'One-page A4 sheet', createdAt: 'Community' },
+        { id: 's2', title: 'AI Agents, LoRA & RAG Interview Cheat Sheet', level: 'Degree (UG)', note: 'Requested by 80+ learners', createdAt: 'Community' }
+      ]) || [];
+      state.feedbackList = safeParse('nn_feedback', []) || [];
+      state.supportConfig = safeParse('nn_sup', state.supportConfig) || state.supportConfig;
+      const rev = safeParse('nn_rev', {});
+      if (rev && typeof rev === 'object') state.creatorRevenue = { ...state.creatorRevenue, ...rev };
+      const up = Number(localStorage.getItem('nn_up') || '0');
+      state.userUploadCount = Number.isFinite(up) ? up : 0;
+      updateUIState();
+    }
+
+    function saveState() {
+      try {
+        localStorage.setItem('nn_notes', JSON.stringify(state.notes));
+        localStorage.setItem('nn_saved', JSON.stringify(state.savedIds));
+        localStorage.setItem('nn_hist', JSON.stringify(state.viewHistory));
+        if (state.user) localStorage.setItem('nn_user', JSON.stringify(state.user));
+        localStorage.setItem('nn_deals', JSON.stringify(state.deals));
+        localStorage.setItem('nn_sug', JSON.stringify(state.bundleSuggestions));
+        localStorage.setItem('nn_feedback', JSON.stringify(state.feedbackList));
+        localStorage.setItem('nn_sup', JSON.stringify(state.supportConfig));
+        localStorage.setItem('nn_rev', JSON.stringify(state.creatorRevenue));
+        localStorage.setItem('nn_up', String(state.userUploadCount));
+      } catch (e) {}
+      updateUIState();
+    }
+
+    function getTotalCreatorEarnings() {
+      const r = state.creatorRevenue;
+      return Number(((r.affiliateEarnings || 0) + (r.bundleSales || 0) + (r.tipsTotal || 0)).toFixed(2));
+    }
+
+    function updateUIState() {
+      const deskBadge = document.getElementById('desk-saved-count');
+      const mobBadge = document.getElementById('mob-saved-badge');
+      if (deskBadge) deskBadge.textContent = state.savedIds.length;
+      if (mobBadge) {
+        mobBadge.textContent = state.savedIds.length;
+        mobBadge.classList.toggle('hidden', state.savedIds.length === 0);
+      }
+      const sub = document.getElementById('header-level-subtitle');
+      if (sub && state.user) sub.textContent = `${state.user.level} • ${state.user.stream} (${state.user.mode === 'guest' ? 'Guest' : state.user.name})`;
+    }
+
+    let splashHideTimer = null;
+    let splashRemoveTimer = null;
+    function dismissSplashLogo() {
+      clearTimeout(splashHideTimer);
+      clearTimeout(splashRemoveTimer);
+      const overlay = document.getElementById('splash-logo-overlay');
+      if (!overlay) return;
+      overlay.classList.add('splash-hide');
+      splashRemoveTimer = setTimeout(() => {
+        if (overlay && overlay.parentNode) overlay.parentNode.removeChild(overlay);
+      }, 500);
+    }
+    function initSplashLogo() {
+      splashHideTimer = setTimeout(dismissSplashLogo, 1400);
+    }
+
+    function checkOnboarding() { if (!state.user) document.getElementById('onboarding-modal').classList.remove('hidden'); }
+    function selectOnboardingLevel(lvl) {
+      state.onboardingLevel = lvl;
+      document.querySelectorAll('.level-btn').forEach(b => {
+        const match = b.getAttribute('data-level') === lvl;
+        b.className = match ? 'level-btn py-2 px-2 rounded-xl border text-center transition bg-ink text-cream border-ink' : 'level-btn py-2 px-2 rounded-xl border text-center transition bg-cream text-ink border-stone-200 hover:border-ink';
+      });
+    }
+    function startAsGuest() {
+      state.user = { mode: 'guest', name: 'Guest Learner', email: 'Private Guest Session', level: state.onboardingLevel, stream: document.getElementById('onboard-stream').value || 'All Programs' };
+      saveState();
+      document.getElementById('onboarding-modal').classList.add('hidden');
+      showToast(`Exploring as Guest (${state.user.level})`);
+      navigateTo('home');
+    }
+    function toggleAccountForm() {
+      const f = document.getElementById('new-account-form');
+      const b = document.getElementById('toggle-create-account-btn');
+      const hidden = f.classList.contains('hidden');
+      f.classList.toggle('hidden', !hidden);
+      b.textContent = hidden ? 'Hide Form' : 'Create Account';
+    }
+    function completeAccountCreation(e) {
+      e.preventDefault();
+      const name = document.getElementById('onboard-name').value.trim();
+      const email = document.getElementById('onboard-email').value.trim();
+      if (!name || !email) return;
+      state.user = { mode: 'account', name, email, level: state.onboardingLevel, stream: document.getElementById('onboard-stream').value || 'All Programs' };
+      saveState();
+      document.getElementById('onboarding-modal').classList.add('hidden');
+      showToast(`Welcome ${name}!`);
+      navigateTo('home');
+    }
+    function updateUserPreferences(lvl, st) {
+      if (!state.user) return;
+      if (lvl) state.user.level = lvl;
+      if (st) state.user.stream = st;
+      saveState();
+      showToast('Preferences updated');
+      if (state.screen === 'profile') renderProfileScreen(document.getElementById('main-content'));
+    }
+    function reopenOnboarding() { document.getElementById('onboarding-modal').classList.remove('hidden'); }
+
+    function navigateTo(screen) {
+      state.screen = screen;
+      ['home', 'upload', 'profile', 'saved', 'deals'].forEach(tab => {
+        const d = document.getElementById(`desk-nav-${tab}`);
+        if (d) d.className = tab === screen
+          ? 'px-4 py-1.5 rounded-full text-xs font-bold transition bg-ink text-cream flex items-center gap-1.5'
+          : 'px-4 py-1.5 rounded-full text-xs font-bold transition text-muted hover:text-ink flex items-center gap-1.5';
+        const m = document.getElementById(`mob-nav-${tab}`);
+        if (m) m.className = tab === screen
+          ? 'flex flex-col items-center gap-1 p-2 rounded-2xl bg-sand text-ink transition relative'
+          : 'flex flex-col items-center gap-1 p-2 rounded-2xl text-muted transition relative';
+      });
+      const main = document.getElementById('main-content');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (screen === 'home') renderHomeScreen(main);
+      else if (screen === 'saved') renderSavedScreen(main);
+      else if (screen === 'deals') renderDealsScreen(main);
+      else if (screen === 'upload') renderUploadScreen(main);
+      else if (screen === 'success') renderSuccessScreen(main);
+      else if (screen === 'profile') renderProfileScreen(main);
+    }
+
+    function renderHomeScreen(container) {
+      const levels = ['All', 'Class 11', 'Class 12', 'Diploma', 'Degree (UG)', 'Medical', 'Professional', 'Masters & PhD', 'Open University'];
+      const streams = ['All', ...Object.keys(STREAM_STYLES)];
+      const list = state.notes.filter(n => {
+        const mL = state.selectedLevelFilter === 'All' || n.level === state.selectedLevelFilter;
+        const mS = state.selectedStream === 'All' || n.stream === state.selectedStream;
+        const mT = !state.trendingOnly || n.trending;
+        const q = state.searchQuery.toLowerCase().trim();
+        const mQ = !q || n.title.toLowerCase().includes(q) || n.summary.toLowerCase().includes(q) || n.stream.toLowerCase().includes(q) || (n.keyPoints || []).some(p => p.toLowerCase().includes(q));
+        return mL && mS && mT && mQ;
+      });
+      const totalViews = state.notes.reduce((sum, item) => sum + (item.views || 0), 0);
+
+      container.innerHTML = `
+        <div class="space-y-5 fade-in">
+          <div class="flex flex-wrap items-center justify-between gap-2 bg-white border border-stone-200/85 rounded-2xl px-4 py-2.5 shadow-card text-xs">
+            <div class="flex flex-wrap items-center gap-3">
+              <span class="font-bold text-ink">14,800+ Active Learners</span>
+              <span class="text-muted">•</span>
+              <span class="font-semibold text-sage-text">${state.notes.length} Curated Study Sets</span>
+              <span class="text-muted">•</span>
+              <span class="font-semibold text-lavender-text">${Object.keys(STREAM_STYLES).length} Branches + Trending Topics</span>
+            </div>
+            <span class="text-[11px] font-bold text-muted">${totalViews.toLocaleString()} Note Reads</span>
+          </div>
+
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+            <input type="text" id="search-input" value="${escapeHtml(state.searchQuery)}" oninput="handleSearch(this.value)" placeholder="Search AI, Cybersecurity, Psychology, Medical, BBA, BCA, B.Com, Law, PhD..." class="flex-1 bg-white border border-stone-200 rounded-2xl px-4 py-3 text-sm shadow-card" />
+            <div class="flex items-center gap-1.5 overflow-x-auto no-scrollbar">
+              ${levels.map(l => `<button onclick="selectLevelFilter('${escapeJs(l)}')" class="px-3.5 py-2.5 rounded-2xl text-xs font-bold border whitespace-nowrap ${state.selectedLevelFilter === l ? 'bg-ink text-cream border-ink' : 'bg-white text-ink border-stone-200'}">${escapeHtml(l)}</button>`).join('')}
+            </div>
+          </div>
+          <div class="flex items-center gap-2 overflow-x-auto no-scrollbar">
+            <button onclick="toggleTrendingFilter()" class="px-3.5 py-2 rounded-full text-xs font-bold border whitespace-nowrap ${state.trendingOnly ? 'bg-rose-text text-white border-rose-text' : 'bg-rose-bg text-rose-text border-rose-border'}">Trending</button>
+            ${streams.map(s => `<button onclick="selectStream('${escapeJs(s)}')" class="px-3.5 py-2 rounded-full text-xs font-bold border whitespace-nowrap ${state.selectedStream === s ? 'bg-ink text-cream border-ink' : 'bg-white text-ink border-stone-200'}">${escapeHtml(s)}</button>`).join('')}
+          </div>
+          ${list.length === 0 ? `<div class="bg-white rounded-3xl p-8 text-center border border-stone-200"><p class="text-xs text-muted mb-3">No matching notes found for this filter.</p><button onclick="resetFeedFilters()" class="px-4 py-2 rounded-full bg-ink text-cream text-xs font-bold">Reset Filters</button></div>` : `
+            <div class="masonry-grid">
+              ${list.map(n => {
+                const st = STREAM_STYLES[n.stream] || STREAM_STYLES['BS & Core Sciences'];
+                const saved = state.savedIds.includes(n.id);
+                return `
+                  <article onclick="openNoteModal('${escapeJs(n.id)}')" class="masonry-item ${st.tint} bg-white rounded-[20px] p-4 border border-stone-200/85 shadow-card hover:shadow-soft transition cursor-pointer">
+                    <div class="flex items-center justify-between gap-1.5 mb-2">
+                      <div class="flex items-center gap-1.5 flex-wrap">
+                        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-ink text-cream">${escapeHtml(n.level)}</span>
+                        ${n.trending ? `<span class="px-2.5 py-0.5 rounded-full text-[9px] font-bold bg-rose-bg text-rose-text border border-rose-border">Trending</span>` : ''}
+                      </div>
+                      <button onclick="event.stopPropagation(); toggleSaveNote('${escapeJs(n.id)}')" class="px-2 py-0.5 rounded-full text-[10px] font-bold ${saved ? 'bg-rose-bg text-rose-text' : 'bg-sand text-muted'}">${saved ? 'Saved' : 'Save'}</button>
+                    </div>
+                    <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold ${st.bg} ${st.text} mb-2">${st.icon} ${escapeHtml(n.stream)}</span>
+                    <h3 class="font-bold text-sm text-ink mb-1.5">${escapeHtml(n.title)}</h3>
+                    <p class="text-xs text-muted line-clamp-3 mb-3">${escapeHtml(n.summary)}</p>
+                    <div class="pt-2 border-t border-stone-200/60 flex items-center justify-between text-[10px] text-muted">
+                      <span>${n.verifiedContributor ? 'Top • ' : ''}${escapeHtml(n.author)}</span>
+                      <span>${(n.views || 0).toLocaleString()} reads</span>
+                    </div>
+                  </article>
+                `;
+              }).join('')}
+            </div>
+          `}
+        </div>
+      `;
+    }
+
+    function renderSavedScreen(container) {
+      const list = state.notes.filter(n => state.savedIds.includes(n.id));
+      container.innerHTML = `
+        <div class="space-y-5 fade-in">
+          <div class="flex items-center justify-between gap-2">
+            <h2 class="font-serif text-2xl font-bold text-ink">Saved Notes</h2>
+            <button onclick="navigateTo('deals')" class="px-3.5 py-2 rounded-full bg-butter-bg text-butter-text border border-butter-border text-xs font-bold">Deals &amp; Support -&gt;</button>
+          </div>
+          ${list.length === 0 ? `<div class="bg-white rounded-3xl p-8 text-center border border-stone-200"><p class="text-xs text-muted mb-3">No saved notes yet.</p><button onclick="navigateTo('home')" class="px-4 py-2 rounded-full bg-ink text-cream text-xs font-bold">Explore</button></div>` : `
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              ${list.map(n => `
+                <div onclick="openNoteModal('${escapeJs(n.id)}')" class="bg-white rounded-[20px] p-4 border border-stone-200 shadow-card cursor-pointer">
+                  <div class="text-[10px] font-bold text-muted mb-1">${escapeHtml(n.level)} • ${escapeHtml(n.stream)}</div>
+                  <h3 class="font-bold text-sm text-ink mb-2">${escapeHtml(n.title)}</h3>
+                  <div class="flex gap-2 pt-2 border-t border-stone-100">
+                    <button onclick="event.stopPropagation(); printNoteById('${escapeJs(n.id)}')" class="px-3 py-1.5 rounded-xl bg-sage-bg text-sage-text text-xs font-bold">Print PDF</button>
+                    <button onclick="event.stopPropagation(); toggleSaveNote('${escapeJs(n.id)}')" class="px-3 py-1.5 rounded-xl bg-sand text-muted text-xs font-semibold">Remove</button>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          `}
+        </div>
+      `;
+    }
+
+    function renderUploadScreen(container) {
+      const levels = ['Class 11', 'Class 12', 'Diploma', 'Degree (UG)', 'Medical', 'Professional', 'Masters & PhD', 'Open University'];
+      container.innerHTML = `
+        <div class="max-w-xl mx-auto space-y-4 fade-in">
+          <h2 class="font-serif text-2xl font-bold text-ink">Upload Study Note</h2>
+          <form onsubmit="handleNoteSubmit(event)" class="space-y-3 bg-white p-5 rounded-2xl border border-stone-200">
+            <input type="text" id="note-title" required placeholder="Note Title *" class="w-full bg-cream border border-stone-200 rounded-xl px-3 py-2.5 text-sm" />
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <select id="note-level" class="bg-cream border border-stone-200 rounded-xl px-3 py-2.5 text-xs font-semibold">
+                ${levels.map(l => `<option value="${escapeHtml(l)}" ${l === 'Class 12' ? 'selected' : ''}>${escapeHtml(l)}</option>`).join('')}
+              </select>
+              <select id="note-stream" class="bg-cream border border-stone-200 rounded-xl px-3 py-2.5 text-xs font-semibold">
+                ${Object.keys(STREAM_STYLES).map(k => `<option value="${escapeHtml(k)}">${escapeHtml(k)}</option>`).join('')}
+              </select>
+            </div>
+            <input type="text" id="note-institution" placeholder="University / Course Tag" class="w-full bg-cream border border-stone-200 rounded-xl px-3 py-2.5 text-sm" />
+            <div class="bg-cream border border-dashed border-stone-300 rounded-xl p-3">
+              <label for="note-file" class="block text-xs font-bold text-ink mb-1">Optional Study Attachment (PDF / Image / Doc)</label>
+              <input type="file" id="note-file" onchange="handleFileChange(this)" class="block w-full text-xs text-muted" />
+              <div id="note-file-label" class="text-[11px] text-muted mt-1">${state.uploadedFileName ? 'Selected: ' + escapeHtml(state.uploadedFileName) : 'No file selected'}</div>
+            </div>
+            <textarea id="note-summary" required rows="4" placeholder="Key concepts, formulas & summary *" class="w-full bg-cream border border-stone-200 rounded-xl px-3 py-2.5 text-sm"></textarea>
+            <button type="submit" class="w-full py-3.5 rounded-2xl bg-ink text-cream font-bold text-sm">SUBMIT NOTE</button>
+          </form>
+        </div>
+      `;
+    }
+
+    function renderSuccessScreen(container) {
+      container.innerHTML = `
+        <div class="max-w-md mx-auto py-12 text-center space-y-4 pop-in">
+          <h2 class="font-serif text-2xl font-bold text-ink">Note uploaded!</h2>
+          <p class="text-xs text-muted">Uploaded notes: ${state.userUploadCount} (3 unlocks Verified Top Contributor)</p>
+          <button onclick="viewNewlyUploadedNote()" class="w-full py-3 rounded-2xl bg-ink text-cream font-bold text-xs">View Note &amp; Flashcards</button>
+          <button onclick="navigateTo('home')" class="w-full py-3 rounded-2xl bg-white border border-stone-200 text-ink font-bold text-xs">Back to Explore</button>
+        </div>
+      `;
+    }
+
+    function renderProfileScreen(container) {
+      const u = state.user || { mode: 'guest', name: 'Guest Learner', email: 'Guest', level: 'Class 12', stream: 'All Programs' };
+      const levels = ['Class 11', 'Class 12', 'Diploma', 'Degree (UG)', 'Medical', 'Professional', 'Masters & PhD', 'Open University'];
+      const r = state.creatorRevenue;
+      container.innerHTML = `
+        <div class="max-w-2xl mx-auto space-y-4 fade-in">
+          <div class="bg-white rounded-[24px] p-6 border border-stone-200 shadow-card space-y-4">
+            <div class="flex items-start justify-between gap-3">
+              <div>
+                <h2 class="font-serif text-xl font-bold text-ink">${escapeHtml(u.name)}</h2>
+                <p class="text-xs text-muted">${escapeHtml(u.email)} • Uploads: ${state.userUploadCount}</p>
+              </div>
+              <button onclick="reopenOnboarding()" class="px-3.5 py-2 rounded-xl bg-sand hover:bg-stone-200 text-ink text-xs font-bold">Switch Account / Guest</button>
+            </div>
+
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-muted mb-2">Academic Level</div>
+              <div class="flex flex-wrap gap-1.5">
+                ${levels.map(l => `<button onclick="updateUserPreferences('${escapeJs(l)}', null)" class="px-3 py-1.5 rounded-xl text-xs font-bold border ${u.level === l ? 'bg-ink text-cream border-ink' : 'bg-cream text-ink border-stone-200'}">${escapeHtml(l)}</button>`).join('')}
+              </div>
+            </div>
+
+            <div>
+              <label for="profile-stream-select" class="block text-[11px] font-bold uppercase tracking-wider text-muted mb-1.5">Preferred Program</label>
+              <select id="profile-stream-select" onchange="updateUserPreferences(null, this.value)" class="w-full bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs font-semibold">
+                <option value="All Programs" ${u.stream === 'All Programs' ? 'selected' : ''}>All Programs</option>
+                ${Object.keys(STREAM_STYLES).map(k => `<option value="${escapeHtml(k)}" ${u.stream === k ? 'selected' : ''}>${escapeHtml(k)}</option>`).join('')}
+              </select>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-[24px] p-6 border border-stone-200 shadow-card space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-xs font-bold text-ink">Creator Revenue Summary</span>
+              <span class="font-serif text-lg font-bold text-sage-text">$${getTotalCreatorEarnings().toFixed(2)}</span>
+            </div>
+            <div class="grid grid-cols-3 gap-2.5 text-center">
+              <div class="bg-cream rounded-xl p-3 border border-stone-200/70">
+                <div class="text-[10px] text-muted">Affiliate</div>
+                <div class="text-xs font-bold text-ink">$${Number(r.affiliateEarnings || 0).toFixed(2)}</div>
+              </div>
+              <div class="bg-cream rounded-xl p-3 border border-stone-200/70">
+                <div class="text-[10px] text-muted">Bonus Packs</div>
+                <div class="text-xs font-bold text-ink">$${Number(r.bundleSales || 0).toFixed(2)}</div>
+              </div>
+              <div class="bg-cream rounded-xl p-3 border border-stone-200/70">
+                <div class="text-[10px] text-muted">Tips (${r.tipsCount || 0})</div>
+                <div class="text-xs font-bold text-ink">$${Number(r.tipsTotal || 0).toFixed(2)}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+
+    function renderDealsScreen(container) {
+      const total = getTotalCreatorEarnings().toFixed(2);
+      container.innerHTML = `
+        <div class="space-y-6 fade-in">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+            <div>
+              <h2 class="font-serif text-2xl font-bold text-ink">Deals &amp; Support Creator</h2>
+              <p class="text-xs text-muted">Zero third-party ads • Direct creator tips, bonus packs &amp; affiliate deals</p>
+            </div>
+            <button onclick="document.getElementById('new-deal-form').classList.toggle('hidden')" class="px-4 py-2.5 rounded-full bg-ink text-cream text-xs font-bold self-start">+ Add Deal / Pack</button>
+          </div>
+
+          <div class="bg-white rounded-[24px] p-5 border border-stone-200 shadow-card space-y-4">
+            <div class="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <div class="text-xs font-bold text-sage-text">100% Owner-Controlled Revenue</div>
+                <div class="font-serif text-xl font-bold text-ink">Total Earned: $${total}</div>
+              </div>
+              <div class="flex items-center gap-2 flex-wrap">
+                ${[1, 3, 5].map(a => `<button onclick="sendCreatorTip(${a})" class="px-3.5 py-2 rounded-xl bg-lavender-bg text-lavender-text text-xs font-bold">Tip $${a}</button>`).join('')}
+                <button onclick="window.open('${escapeJs(state.supportConfig.paymentUrl)}','_blank','noopener,noreferrer')" class="px-3.5 py-2 rounded-xl bg-ink text-cream text-xs font-bold">Pay Link</button>
+              </div>
+            </div>
+            <form onsubmit="submitCustomTip(event)" class="flex gap-2 pt-2 border-t border-stone-100">
+              <input type="number" id="custom-tip-input" step="0.50" min="0.50" required placeholder="Custom tip ($)" class="w-36 bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+              <button type="submit" class="px-4 py-2 rounded-xl bg-sand hover:bg-stone-200 text-ink text-xs font-bold">Record Custom Tip</button>
+            </form>
+          </div>
+
+          <form id="new-deal-form" onsubmit="addCreatorDeal(event)" class="hidden bg-white rounded-[24px] p-5 border border-stone-200 space-y-3">
+            <input type="text" id="deal-title" required placeholder="Offer Title *" class="w-full bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+              <select id="deal-category" class="bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs font-semibold">
+                <option value="Bonus Study Pack">Bonus Study Pack</option>
+                <option value="Affiliate Partner Deal">Affiliate Partner Deal</option>
+              </select>
+              <input type="text" id="deal-badge" required placeholder="Badge (e.g. $3.99) *" class="bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+              <input type="number" step="0.01" min="0.50" id="deal-payout" required value="3.50" class="bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+            </div>
+            <input type="text" id="deal-desc" required placeholder="Short description *" class="w-full bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+            <button type="submit" class="w-full py-2.5 rounded-xl bg-ink text-cream font-bold text-xs">Publish Deal</button>
+          </form>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            ${state.deals.map(d => `
+              <div class="${d.bg} rounded-[24px] p-5 border ${d.border} shadow-card flex flex-col justify-between">
+                <div>
+                  <div class="text-[10px] font-bold ${d.accent} mb-1">${escapeHtml(d.category)} • ${escapeHtml(d.badge)}</div>
+                  <h3 class="font-serif font-bold text-base text-ink mb-1.5">${escapeHtml(d.title)}</h3>
+                  <p class="text-xs text-muted mb-4">${escapeHtml(d.description)}</p>
+                </div>
+                <button onclick="claimCreatorDeal('${escapeJs(d.id)}')" class="w-full py-2.5 rounded-xl bg-white hover:bg-ink hover:text-cream text-ink font-bold text-xs border border-stone-200 transition">${escapeHtml(d.cta)}</button>
+              </div>
+            `).join('')}
+          </div>
+
+          <section class="bg-white rounded-[24px] p-5 border border-stone-200 shadow-card space-y-4">
+            <div class="flex items-center justify-between gap-2">
+              <div>
+                <h3 class="font-serif text-lg font-bold text-ink">Suggest a Bundle</h3>
+                <p class="text-xs text-muted">Pitch a bundle idea for the creator to build.</p>
+              </div>
+              ${state.bundleSuggestions.length ? `<button type="button" onclick="clearBundleSuggestions()" class="px-3 py-1.5 rounded-xl bg-sand text-muted text-xs font-semibold">Clear List</button>` : ''}
+            </div>
+            <form onsubmit="submitBundleSuggestion(event)" class="space-y-3">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+                <input type="text" id="suggest-bundle-title" required placeholder="Bundle Idea Title *" class="bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+                <input type="text" id="suggest-bundle-level" placeholder="Target Level (e.g. Class 12, BBA)" class="bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+              </div>
+              <input type="text" id="suggest-bundle-note" placeholder="Optional details or note" class="w-full bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+              <button type="submit" class="px-4 py-2.5 rounded-xl bg-ink text-cream font-bold text-xs">Submit Bundle Idea</button>
+            </form>
+            <div class="space-y-2 pt-2 border-t border-stone-100">
+              ${state.bundleSuggestions.map(s => `
+                <div class="bg-cream rounded-xl p-3 border border-stone-200/70">
+                  <div class="text-xs font-bold text-ink">${escapeHtml(s.title)} <span class="text-[10px] font-semibold text-muted">(${escapeHtml(s.level || 'All')})</span></div>
+                  ${s.note ? `<div class="text-[11px] text-muted mt-0.5">${escapeHtml(s.note)}</div>` : ''}
+                </div>
+              `).join('')}
+            </div>
+          </section>
+
+          <section class="bg-white rounded-[24px] p-5 border border-stone-200 shadow-card space-y-3">
+            <h3 class="font-serif text-base font-bold text-ink">Payout &amp; Support Link Settings</h3>
+            <form onsubmit="saveSupportSettings(event)" class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+              <input type="text" id="sup-upi" value="${escapeHtml(state.supportConfig.upiId)}" placeholder="UPI / Handle" class="bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+              <input type="url" id="sup-url" value="${escapeHtml(state.supportConfig.paymentUrl)}" placeholder="https://..." class="bg-cream border border-stone-200 rounded-xl px-3 py-2 text-xs" />
+              <button type="submit" class="sm:col-span-2 py-2.5 rounded-xl bg-sand hover:bg-stone-200 text-ink font-bold text-xs">Save Payout Details</button>
+            </form>
+          </section>
+        </div>
+      `;
+    }
+
+    function openNoteModal(id) {
+      state.activeNoteId = id;
+      state.modalTab = 'notes';
+      state.flashcardIndex = 0;
+      state.flashcardFlipped = false;
+      state.quizSelectedOption = null;
+      const n = state.notes.find(x => x.id === id);
+      if (n) {
+        n.views = (n.views || 0) + 1;
+        state.viewHistory = [id, ...state.viewHistory.filter(x => x !== id)].slice(0, 20);
+        saveState();
+      }
+      renderNoteModalContent();
+      document.getElementById('note-modal').classList.remove('hidden');
+    }
+    function closeNoteModal() { document.getElementById('note-modal').classList.add('hidden'); }
+    function switchModalTab(t) { state.modalTab = t; renderNoteModalContent(); }
+    function cycleReadingFontSize() { state.readingFontSize = state.readingFontSize === 'normal' ? 'large' : 'normal'; renderNoteModalContent(); }
+    function toggleReadingFontStyle() { state.readingFontSans = !state.readingFontSans; renderNoteModalContent(); }
+    function flipFlashcard() { state.flashcardFlipped = !state.flashcardFlipped; renderNoteModalContent(); }
+    function nextFlashcard(len) { state.flashcardIndex = (state.flashcardIndex + 1) % len; state.flashcardFlipped = false; renderNoteModalContent(); }
+    function selectQuizOption(i) { state.quizSelectedOption = i; renderNoteModalContent(); }
+
+    function renderNoteModalContent() {
+      const n = state.notes.find(x => x.id === state.activeNoteId);
+      if (!n) return;
+      const saved = state.savedIds.includes(n.id);
+      const sz = state.readingFontSize === 'large' ? 'text-base' : 'text-xs sm:text-sm';
+      const cards = n.flashcards && n.flashcards.length ? n.flashcards : [{ q: n.title, a: n.summary }];
+      const card = cards[state.flashcardIndex % cards.length];
+      const quiz = n.quiz || { question: n.title, options: [n.stream, 'Other'], answerIndex: 0 };
+      const picked = state.quizSelectedOption;
+      const isCorrect = picked !== null && picked === quiz.answerIndex;
+
+      document.getElementById('modal-body').innerHTML = state.modalTab === 'quiz' ? `
+        <div class="space-y-4">
+          <div onclick="flipFlashcard()" class="p-6 rounded-2xl bg-white border-2 border-stone-200 cursor-pointer">
+            <div class="text-[10px] font-bold text-muted mb-2">${state.flashcardFlipped ? 'ANSWER' : 'QUESTION (TAP TO FLIP)'}</div>
+            <div class="font-bold text-base text-ink">${escapeHtml(state.flashcardFlipped ? card.a : card.q)}</div>
+          </div>
+          <div class="flex gap-2">
+            <button onclick="flipFlashcard()" class="flex-1 py-2.5 rounded-xl bg-sand text-ink text-xs font-bold">Flip</button>
+            <button onclick="nextFlashcard(${cards.length})" class="flex-1 py-2.5 rounded-xl bg-ink text-cream text-xs font-bold">Next Card -&gt;</button>
+          </div>
+          <div class="p-4 rounded-2xl bg-white border border-stone-200 space-y-2">
+            <div class="font-bold text-xs text-ink">${escapeHtml(quiz.question)}</div>
+            ${quiz.options.map((o, idx) => `<button onclick="selectQuizOption(${idx})" class="w-full text-left px-3 py-2 rounded-xl border text-xs ${picked === idx ? (idx === quiz.answerIndex ? 'bg-sage-bg border-sage-border font-bold' : 'bg-rose-bg border-rose-border') : 'bg-cream border-stone-200'}">${escapeHtml(o)}</button>`).join('')}
+            ${picked !== null ? `<div class="text-xs font-bold pt-1 ${isCorrect ? 'text-sage-text' : 'text-rose-text'}">${isCorrect ? 'Correct!' : 'Not quite — correct answer: ' + escapeHtml(quiz.options[quiz.answerIndex])}</div>` : ''}
+          </div>
+        </div>
+      ` : `
+        <div class="space-y-3 ${sz}">
+          <h2 class="${state.readingFontSans ? 'font-sans' : 'font-serif'} text-xl font-bold text-ink">${escapeHtml(n.title)}</h2>
+          <div class="text-xs text-muted">By ${escapeHtml(n.author)} • ${escapeHtml(n.level)} • ${escapeHtml(n.stream)}${n.attachmentName ? ' • File: ' + escapeHtml(n.attachmentName) : ''}</div>
+          <p class="leading-relaxed">${escapeHtml(n.summary)}</p>
+          <ul class="list-disc pl-5 space-y-1">${(n.keyPoints || []).map(p => `<li>${escapeHtml(p)}</li>`).join('')}</ul>
+          <div class="p-3 rounded-xl bg-white border border-stone-200 text-xs"><strong>Tip:</strong> ${escapeHtml(n.example || '')}</div>
+        </div>
+      `;
+
+      document.getElementById('modal-actions').innerHTML = `
+        <button onclick="toggleSaveNote('${escapeJs(n.id)}'); renderNoteModalContent();" class="px-4 py-2.5 rounded-xl text-xs font-bold ${saved ? 'bg-rose-bg text-rose-text' : 'bg-sand text-ink'}">${saved ? 'Saved' : 'Save'}</button>
+        <button onclick="printNoteById('${escapeJs(n.id)}')" class="flex-1 py-2.5 rounded-xl bg-sage-bg text-sage-text text-xs font-bold">Print / Save PDF</button>
+      `;
+    }
+
+    function printNoteById(id) {
+      const n = state.notes.find(x => x.id === id);
+      if (!n) return;
+      const sheet = document.getElementById('printable-sheet');
+      sheet.innerHTML = `<div style="max-width:760px;margin:0 auto;font-family:sans-serif;"><h1>${escapeHtml(n.title)}</h1><p><strong>Contributor:</strong> ${escapeHtml(n.author)} • ${escapeHtml(n.level)}</p><p>${escapeHtml(n.summary)}</p><ul>${(n.keyPoints || []).map(p => `<li>${escapeHtml(p)}</li>`).join('')}</ul></div>`;
+      sheet.classList.remove('hidden');
+      let cleaned = false;
+      const cleanup = () => {
+        if (cleaned) return;
+        cleaned = true;
+        sheet.classList.add('hidden');
+        window.removeEventListener('afterprint', cleanup);
+      };
+      window.addEventListener('afterprint', cleanup);
+      window.print();
+      setTimeout(cleanup, 1500);
+    }
+
+    function handleFileChange(input) {
+      const f = input && input.files && input.files[0];
+      state.uploadedFileName = f ? f.name : '';
+      const lbl = document.getElementById('note-file-label');
+      if (lbl) lbl.textContent = state.uploadedFileName ? 'Selected: ' + state.uploadedFileName : 'No file selected';
+    }
+
+    function handleNoteSubmit(e) {
+      e.preventDefault();
+      state.userUploadCount += 1;
+      const summary = document.getElementById('note-summary').value.trim();
+      const note = {
+        id: 'u-' + Date.now(),
+        title: document.getElementById('note-title').value.trim(),
+        level: document.getElementById('note-level').value,
+        stream: document.getElementById('note-stream').value,
+        institution: document.getElementById('note-institution').value.trim() || 'Open Note',
+        attachmentName: state.uploadedFileName || '',
+        summary,
+        author: (state.user && state.user.name) || 'Student Contributor',
+        verifiedContributor: state.userUploadCount >= 3,
+        views: 1,
+        keyPoints: [summary],
+        example: 'Active recall practice recommended.'
+      };
+      state.notes.unshift(note);
+      state.lastUploadedNoteId = note.id;
+      state.uploadedFileName = '';
+      saveState();
+      navigateTo('success');
+    }
+
+    function viewNewlyUploadedNote() {
+      const id = state.lastUploadedNoteId || (state.notes[0] && state.notes[0].id);
+      navigateTo('home');
+      if (id) setTimeout(() => openNoteModal(id), 120);
+    }
+
+    function toggleSaveNote(id) {
+      const i = state.savedIds.indexOf(id);
+      if (i === -1) state.savedIds.unshift(id); else state.savedIds.splice(i, 1);
+      saveState();
+      if (state.screen === 'home') renderHomeScreen(document.getElementById('main-content'));
+      else if (state.screen === 'saved') renderSavedScreen(document.getElementById('main-content'));
+    }
+
+    function submitBundleSuggestion(e) {
+      e.preventDefault();
+      const title = document.getElementById('suggest-bundle-title').value.trim();
+      if (!title) return;
+      state.bundleSuggestions.unshift({ id: 's-' + Date.now(), title, level: document.getElementById('suggest-bundle-level').value.trim() || 'All', note: document.getElementById('suggest-bundle-note').value.trim(), createdAt: new Date().toLocaleDateString() });
+      saveState();
+      showToast('Bundle suggestion submitted!');
+      renderDealsScreen(document.getElementById('main-content'));
+    }
+
+    function clearBundleSuggestions() {
+      state.bundleSuggestions = [];
+      saveState();
+      showToast('Bundle list cleared');
+      renderDealsScreen(document.getElementById('main-content'));
+    }
+
+    function sendCreatorTip(amt) {
+      const num = Number(amt);
+      if (!Number.isFinite(num) || num <= 0) return;
+      state.creatorRevenue.tipsCount += 1;
+      state.creatorRevenue.tipsTotal = Number(((state.creatorRevenue.tipsTotal || 0) + num).toFixed(2));
+      saveState();
+      showToast(`$${num.toFixed(2)} tip recorded!`);
+      renderDealsScreen(document.getElementById('main-content'));
+    }
+
+    function submitCustomTip(e) {
+      e.preventDefault();
+      const val = parseFloat(document.getElementById('custom-tip-input').value);
+      if (!Number.isFinite(val) || val <= 0) return;
+      sendCreatorTip(val);
+    }
+
+    function saveSupportSettings(e) {
+      e.preventDefault();
+      state.supportConfig.upiId = document.getElementById('sup-upi').value.trim() || state.supportConfig.upiId;
+      const url = document.getElementById('sup-url').value.trim();
+      if (url && /^https?:\/\//i.test(url)) state.supportConfig.paymentUrl = url;
+      saveState();
+      showToast('Payout details saved!');
+    }
+
+    function addCreatorDeal(e) {
+      e.preventDefault();
+      const payout = parseFloat(document.getElementById('deal-payout').value) || 2.50;
+      const cat = document.getElementById('deal-category').value;
+      state.deals.unshift({ id: 'd-' + Date.now(), category: cat, badge: document.getElementById('deal-badge').value.trim(), title: document.getElementById('deal-title').value.trim(), description: document.getElementById('deal-desc').value.trim(), cta: 'Claim Deal ->', payout, bg: 'bg-butter-bg/75', border: 'border-butter-border', accent: 'text-butter-text' });
+      saveState();
+      showToast('Deal added!');
+      renderDealsScreen(document.getElementById('main-content'));
+      const form = document.getElementById('new-deal-form');
+      if (form) form.classList.add('hidden');
+    }
+
+    function claimCreatorDeal(id) {
+      const d = state.deals.find(x => x.id === id);
+      if (!d) return;
+      state.creatorRevenue.dealsClaimed += 1;
+      if (d.category.includes('Pack')) state.creatorRevenue.bundleSales = Number(((state.creatorRevenue.bundleSales || 0) + d.payout).toFixed(2));
+      else state.creatorRevenue.affiliateEarnings = Number(((state.creatorRevenue.affiliateEarnings || 0) + d.payout).toFixed(2));
+      saveState();
+      showToast(`+$${d.payout.toFixed(2)} recorded!`);
+      renderDealsScreen(document.getElementById('main-content'));
+    }
+
+    function resetFeedFilters() {
+      state.selectedLevelFilter = 'All';
+      state.selectedStream = 'All';
+      state.trendingOnly = false;
+      state.searchQuery = '';
+      renderHomeScreen(document.getElementById('main-content'));
+    }
+    function handleSearch(v) { state.searchQuery = v; renderHomeScreen(document.getElementById('main-content')); const el = document.getElementById('search-input'); if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); } }
+    function selectLevelFilter(l) { state.selectedLevelFilter = l; renderHomeScreen(document.getElementById('main-content')); }
+    function selectStream(s) { state.selectedStream = s; renderHomeScreen(document.getElementById('main-content')); }
+    function toggleTrendingFilter() { state.trendingOnly = !state.trendingOnly; renderHomeScreen(document.getElementById('main-content')); }
+    function openInstallModal() { document.getElementById('install-modal').classList.remove('hidden'); }
+    function closeInstallModal() { document.getElementById('install-modal').classList.add('hidden'); }
+    function openFeedbackModal() { document.getElementById('feedback-modal').classList.remove('hidden'); }
+    function closeFeedbackModal() { document.getElementById('feedback-modal').classList.add('hidden'); }
+    function submitFeedback(e) {
+      e.preventDefault();
+      const input = document.getElementById('feedback-input');
+      const text = input.value.trim();
+      if (!text) return;
+      state.feedbackList.unshift({ id: 'fb-' + Date.now(), text, createdAt: new Date().toLocaleDateString() });
+      saveState();
+      input.value = '';
+      closeFeedbackModal();
+      showToast('Feedback saved!');
+    }
+    let toastTimer = null;
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toast-message').textContent = msg;
+      t.classList.remove('hidden');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.add('hidden'), 2400);
+    }
+    function escapeHtml(s) { return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
+    function escapeJs(s) { return escapeHtml(String(s || '').replace(/\\/g, '\\\\').replace(/'/g, '&#39;')); }
+
+    loadState();
+    navigateTo('home');
+    initSplashLogo();
+    checkOnboarding();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
